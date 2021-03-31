@@ -1,7 +1,6 @@
-#Database
-*.sqlite3
-
 # virtualenv
 venv/
+
 #
 .idea/
+__pycache__/
