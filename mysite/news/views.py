@@ -4,6 +4,7 @@ from .models import News, Category
 from .forms import NewsForm
 from django.urls import reverse_lazy
 
+
 class HomeNews(ListView):
     model = News
     template_name = 'news/home_news_list.html'
@@ -45,7 +46,7 @@ class ViewNews(DetailView):
 class CreateNews(CreateView):
     form_class = NewsForm
     template_name = 'news/add_news.html'
-    #success_url = reverse_lazy('home')
+    # success_url = reverse_lazy('home')
 
 # def index(request): рефакторинг в класс отображения HomeNews
 #     news = News.objects.all()
