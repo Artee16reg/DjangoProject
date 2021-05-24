@@ -11,9 +11,11 @@
 {% block content %}
     {% for item in news %}
         <div class="card mb-3">
+
             <div class="card-header">
                 Категория: <a href="{{ item.category.get_absolute_url }}">{{ item.category }}</a>
             </div>
+
             <div class="card-body">
                 <div class="media">
                     {% if item.photo %}
@@ -32,6 +34,7 @@
                 {{ item.created_at|date:"Y-m-d H:i" }}
             </div>
         </div>
+
 
     {% endfor %}
     <a href="#" class="btn badge-dark">up</a>

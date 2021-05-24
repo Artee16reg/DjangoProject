@@ -1,0 +1,11 @@
+#header, .module caption,
+.inline-group h2{
+    background: #000000;
+}
+#branding h1, #branding h1 a:link, #branding h1 a:visited,
+a.section:link, a.section:visited{
+    color: #ffff00;
+}
+div.breadcrumbs{
+    background: #757575;
+}
