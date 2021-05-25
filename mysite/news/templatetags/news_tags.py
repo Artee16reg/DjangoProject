@@ -20,4 +20,4 @@ def show_categories():
     for i in sum_news_all:
         count += i.news__count
     categories = Category.objects.annotate(cnt=Count('news')).filter(cnt__gt=0)
-    return {"categories": categories, 'arg1': count}
+    return {"categories": categories, 'amount': count}
