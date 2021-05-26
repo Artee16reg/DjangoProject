@@ -1,10 +1,20 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView
+
 from .models import News, Category
 from .forms import NewsForm
 from .utils import MyMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
+
+
+def test(request):
+    objects = ['j1', 'j2', 'j3', 'j4', 'j5', 'j6', 'j8', 'j9']
+    paginator = Paginator(objects, 2)
+    page_num = request.GET.get('page', 1)
+    page_objects = paginator.get_page(page_num)
+    return render(request, 'news/test.html', {'page_obj': page_objects})
 
 
 class HomeNews(MyMixin, ListView):

@@ -1,0 +1,19 @@
+<!-- работа с пагинацией -->
+{% extends 'base.html' %}
+
+{% block title %}
+    тестовая стрстрстср :: {{ block.super }}
+{% endblock %}
+
+{% block sidebar %}
+    {% include 'inc/_sidebar.html' %}
+{% endblock %}
+
+{% block content %}
+
+    {% for name in page_obj.object_list %}
+        <P>{{ name }}</P>
+    {% endfor %}
+
+
+{% endblock %}
